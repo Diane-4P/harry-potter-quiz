@@ -1,3 +1,21 @@
-body {
-    background: url(../images/marauders-map.jpg) center center/cover;
+@font-face {
+    font-family: harryPotter;
+    src: url(../fonts/HARRYP_.TTF);
+    
 }
+
+h1 {
+    font-family: harryPotter;
+    font-size: 5rem;
+}
+
+#heading {
+    font-family: harryPotter;
+    font-size: 5rem;    
+}
+
+
+
+/*body {
+    background: url(../images/marauders-map.jpg) center center/cover;
+}*/
