@@ -1,0 +1,6 @@
+This favicon was created using the subsequent graphics from Font Awesome:
+
+- Graphics Title: hat-wizard-solid.svg
+- Graphics Author: Copyright 2025 Font Awesome, Inc and other contributors (https://github.com/FortAwesome/Font-Awesome)
+- Graphics Source: https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs
+- Graphics License: CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
