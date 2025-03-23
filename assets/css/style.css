@@ -1,21 +1,40 @@
+/* Link to font */
 @font-face {
     font-family: harryPotter;
     src: url(../fonts/HARRYP_.TTF);
-    
+}
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
 }
 
 h1 {
     font-family: harryPotter;
-    font-size: 5rem;
+    font-size: 7rem;
+    padding-right: 20px;
 }
 
 #heading {
     font-family: harryPotter;
-    font-size: 5rem;    
+    font-size: 7rem;    
+}
+
+/* Styling the header */
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding-bottom: 15rem;
+
 }
 
 
-
-/*body {
+body {
     background: url(../images/marauders-map.jpg) center center/cover;
-}*/
+}
