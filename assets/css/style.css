@@ -9,17 +9,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
 
+body {
+    background: url(../images/marauders-map.jpg) center center/cover;
+    font-family: harryPotter;
+    width: 100%;
+    height: 100vh;
 }
 
 h1 {
-    font-family: harryPotter;
     font-size: 7rem;
     padding-right: 20px;
 }
 
 #heading {
-    font-family: harryPotter;
     font-size: 7rem;    
 }
 
@@ -30,11 +34,38 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 50px;
-    padding-bottom: 15rem;
+}
+
+/* Styling levels background */
+#levels {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    background-color: rgba(126, 63, 49, .6);
+    border-radius: 5%;
 
 }
 
+/* General style for buttons */
+.btn {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 200px;
+    font-family: harryPotter;
+    font-size: 40px;
+    border-radius: 10px;
+    background-color: rgba(221, 207, 153, .6);
+    margin: 2px;
+    padding: 3px;
+}
 
-body {
-    background: url(../images/marauders-map.jpg) center center/cover;
+#years .btn {
+    margin: 20px 0;
+}
+
+.hide {
+    display: none;
 }
