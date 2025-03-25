@@ -39,31 +39,31 @@ h1 {
 
 /* Styling levels background */
 #levels {
-    display: flex;
+    display: block;
     position: absolute;
-    justify-content: center;
+    justify-items: center;
     width: 80%;
     margin-left: 10%;
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
+    text-align: center;
 }
 
 /* General style for buttons */
 .btn {
-    display: flex;
-    flex-direction: column;
     height: 50px;
     width: 200px;
     font-family: harryPotter;
     font-size: 40px;
     border-radius: 10px;
     background-color: rgba(221, 207, 153, .6);
-    margin: 2px;
-    padding: 3px;
+    margin: 20px 0;
+    padding: 10px;
 }
 
-#years .btn {
-    margin: 20px 0;
+#years p {
+    margin-top: 10%;
+    font-size: 40px;
 }
 
 .hide {
@@ -98,8 +98,8 @@ h1 {
         margin-left: 30%;
     }
 
-    #years .btn {
-        margin: 3rem 0;
+    .btn {
+        margin: 1.5rem;
     }
 }
 
@@ -111,43 +111,62 @@ h1 {
         padding: 3rem;
     }
 
-   /* #levels {
-        width: 30%;
-        margin-left: 35%;
-    }
-*/
     .btn {
-        height: 100px;
-        width: 300px;
+        height: 150px;
+        width: 400px;
         padding: 12px 6px;
-        font-size: 4em;
+        margin: 1.8rem;
+        font-size: 6em;
     }
 
-    #years .btn {
-        margin: 4rem 0;
+    #years p {
+        font-size: 3.5rem;
     }
+
 }
 
-/* Media query: desktops and 4k (2600px and up) */
-@media screen and (min-width: 2600px) {
+/* Media query: desktops and 4k (2500px and up) */
+@media screen and (min-width: 2500px) {
     h1,
     #heading {
-        font-size: 20em;
+        font-size: 15em;
         padding: 8rem;
     }
 
     #levels {
-        width: 35%;
-        margin-left: 35%;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #years p {
+        font-size: 6rem;
     }
 
     .btn {
         height: 300px;
-        width: 900px;
-        padding: 30px 6px;
-        font-size: 15em;
-    }
-    #years .btn {
-        margin: 10rem 0;
+        width: 800px;
+        margin: 3rem;
+        padding: 15px 8px;
+        font-size: 12em;
     }
 }
+
+/* Media query: 5k (5000px and up) */
+@media screen and (min-width: 5000px) {
+    h1,
+    #heading {
+        font-size: 25em;
+    }
+
+    #levels {
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    .btn {
+        margin: 7rem;
+    }
+
+    #years p {
+        font-size: 10rem;
+    }
