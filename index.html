@@ -30,7 +30,7 @@
 
     <!-- Year for each level needed to pass -->
     <div id="levels">
-        <div id="years">
+        <div id="years" class="hide">
             <p>Enter the year to answer the questions</p>
             <button class="btn year-one">Year One</button>
             <button class="btn year-two">Year Two</button>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Quiz questions and answers -->
-    <div class="hide">
+    <div>
         <div id="questions" >
             <div id="answers">
                 <p >Question</p>
@@ -47,8 +47,10 @@
                 <button class="btn answer2"></button>
                 <button class="btn answer3"></button>
                 <button class="btn answer4"></button>
-                <p id="correct-answers">Correct:</p>
-                <p id="incorrect-answers">Incorrect:</p>
+            </div>
+            <div id="scores">
+                <p>Correct: <span id="correct-answers">0</span></p>
+                <p>Incorrect: <span id="incorrect-answers">0</span></p>
             </div>
         </div>
     </div>
