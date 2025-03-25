@@ -37,6 +37,47 @@ h1 {
     margin: 50px;
 }
 
+/* Styling the instructions modal */
+#instructions {
+   /* display: none; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(126, 63, 49, .8);
+}
+
+#how-to-play {
+    background-color: rgba(221, 207, 153, .6);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #7e3f31;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #7e3f31;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2,
+li {
+    margin-bottom: 5px;
+}
+
 /* Styling levels and questions background */
 #levels,
 #questions {
@@ -101,6 +142,7 @@ h1 {
         flex-direction: row;
     }
 
+    /* Levels section */
     #levels {
         width: 60%;
         margin-left: 20%;
@@ -114,12 +156,27 @@ h1 {
         font-size: 5em;
     }
 
+    /* Instructions modal */
+    #how-to-play {
+        width: 60%;
+    }
+
+    h2,
+    li {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 15px;
+        font-size: 2rem;
+    }
+
+    /* Levels, question and answers sections */
     #levels,
     #questions {
         width: 40%;
         margin-left: 30%;
     }
 
+    /* General style for buttons */
     .btn {
         margin: 1.5rem;
     }
@@ -133,6 +190,18 @@ h1 {
         padding: 3rem;
     }
 
+    /* Instructions modal */
+    h2,
+    li {
+        margin-bottom: 20px;
+        font-size: 3rem;
+    }
+
+    .close {
+        font-size: 40px;
+    }
+
+    /* General style for buttons */
     .btn {
         height: 150px;
         width: 400px;
@@ -141,10 +210,12 @@ h1 {
         font-size: 6em;
     }
 
+    /* Levels section*/
     #years p {
         font-size: 3.5rem;
     }
 
+    /* Questions and Answers section */ 
     #answers p,
     #scores {
         font-size: 3rem;
@@ -159,6 +230,19 @@ h1 {
         padding: 8rem;
     }
 
+    /* Instructions modal */
+    h2,
+    li {
+        margin-bottom: 30px;
+        font-size: 5rem;
+    }
+
+    .close {
+        font-size: 70px;
+        margin-right: 10px;
+    }
+
+    /* Levels, question and answers sections */
     #levels,
     #questions {
         width: 50%;
@@ -187,6 +271,22 @@ h1 {
         font-size: 25em;
     }
 
+    /* Instructions modal */
+    #how-to-play {
+        width: 45%;
+    }
+
+    h2,
+    li {
+        margin-bottom: 40px;
+        font-size: 7rem;
+    }
+    
+    .close {
+        font-size: 90px;
+    }
+
+    /* Levels, question and answers sections */
     #levels {
         width: 40%;
         margin-left: 30%;
