@@ -39,7 +39,7 @@ h1 {
 
 /* Styling the instructions modal */
 #instructions {
-   /* display: none; */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
@@ -68,6 +68,24 @@ h1 {
 
 .close:hover,
 .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.open-button {
+    background-color: rgba(126, 63, 49, .6);
+    font-family: harryPotter;
+    font-size: 25px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+    position: relative;
+}
+
+.open-button:hover,
+.open-button:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -197,7 +215,8 @@ li {
         font-size: 3rem;
     }
 
-    .close {
+    .close,
+    .open-button {
         font-size: 40px;
     }
 
@@ -237,7 +256,8 @@ li {
         font-size: 5rem;
     }
 
-    .close {
+    .close,
+    .open-button {
         font-size: 70px;
         margin-right: 10px;
     }
@@ -282,7 +302,8 @@ li {
         font-size: 7rem;
     }
     
-    .close {
+    .close,
+    .open-button {
         font-size: 90px;
     }
 
