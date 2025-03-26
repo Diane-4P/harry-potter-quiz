@@ -37,9 +37,10 @@ h1 {
     margin: 50px;
 }
 
-/* Styling the instructions modal */
+/* Styling the instructions modal 
+Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp*/
 #instructions {
-    display: none; 
+    display: block;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -50,7 +51,7 @@ h1 {
     background-color: rgba(126, 63, 49, .8);
 }
 
-#how-to-play {
+#howToPlay {
     background-color: rgba(221, 207, 153, .6);
     margin: 15% auto;
     padding: 20px;
@@ -175,7 +176,7 @@ li {
     }
 
     /* Instructions modal */
-    #how-to-play {
+    #howToPlay {
         width: 60%;
     }
 
@@ -292,7 +293,7 @@ li {
     }
 
     /* Instructions modal */
-    #how-to-play {
+    #howToPlay {
         width: 45%;
     }
 
