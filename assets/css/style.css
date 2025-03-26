@@ -1,7 +1,13 @@
-/* Link to font */
+/* Link to font for the Harry Potter and Angel Wish fallback */
 @font-face {
     font-family: harryPotter;
     src: url(../fonts/HARRYP_.TTF);
+}
+
+@font-face {
+    font-family: angelWish;
+    src: url(../fonts/Angel\ wish.ttf),
+    src: url(../fonts/Angel\wish.otf);
 }
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -13,7 +19,7 @@
 
 body {
     background: url(../images/marauders-map.jpg) center center/cover;
-    font-family: harryPotter;
+    font-family: harryPotter, angelWish, serif;
     width: 100%;
     height: 100vh;
 }
@@ -76,7 +82,7 @@ Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp*/
 
 .open-button {
     background-color: rgba(126, 63, 49, .6);
-    font-family: harryPotter;
+    font-family: harryPotter, angelWish, serif;
     font-size: 25px;
     padding: 8px;
     margin-top: 10px;
@@ -114,7 +120,7 @@ li {
 .btn {
     height: 50px;
     width: 200px;
-    font-family: harryPotter;
+    font-family: harryPotter, angelWish, serif;
     font-size: 40px;
     border-radius: 10px;
     background-color: rgba(221, 207, 153, .6);
