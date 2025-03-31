@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: angelWish;
-    src: url(../fonts/Angel\ wish.ttf),
+    src: url(../fonts/Angel\ wish.ttf);
     src: url(../fonts/Angel\wish.otf);
 }
 
@@ -103,22 +103,9 @@ li {
     margin-bottom: 5px;
 }
 
-/* Styling levels and questions background */
-#levels,
-#questions {
-    display: block;
-    position: absolute;
-    justify-items: center;
-    width: 80%;
-    margin-left: 10%;
-    background-color: rgba(126, 63, 49, .8);
-    border-radius: 5%;
-    text-align: center;
-}
-
 /* General style for buttons */
 .btn {
-    height: 50px;
+    height: 70px;
     width: 200px;
     font-family: harryPotter, angelWish, serif;
     font-size: 40px;
@@ -128,11 +115,35 @@ li {
     padding: 10px;
 }
 
+/* Styling levels background */
+#levels {
+    display: block;
+    position: absolute;
+    justify-items: center;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgba(126, 63, 49, .8);
+    border-radius: 5%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
 #years p {
     margin-top: 10%;
     font-size: 40px;
 }
 
+/* Styling questions background */
+#questions {
+    display: none;
+    position: absolute;
+    justify-items: center;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgba(126, 63, 49, .8);
+    border-radius: 5%;
+    text-align: center;
+}
 #answers p {
     display: flex;
     flex-direction: row;
@@ -152,11 +163,11 @@ li {
     gap: 10px;
     width: 60%;
 }
-
+/*
 .hide {
     display: none;
 }
-
+*/
 /* Media query: mobiles and larger (425px and up) */
 @media screen and (min-width: 425px) {
     #heading {
@@ -212,7 +223,10 @@ li {
     h1,
     #heading {
         font-size: 8rem;
-        padding: 3rem;
+        padding: 2rem;
+    }
+    #header {
+        margin: 30px;
     }
 
     /* Instructions modal */
@@ -229,11 +243,11 @@ li {
 
     /* General style for buttons */
     .btn {
-        height: 150px;
+        height: 100px;
         width: 400px;
         padding: 12px 6px;
-        margin: 1.8rem;
-        font-size: 6em;
+        margin: 1.5rem;
+        font-size: 4.2em;
     }
 
     /* Levels section*/
@@ -252,8 +266,8 @@ li {
 @media screen and (min-width: 2500px) {
     h1,
     #heading {
-        font-size: 15em;
-        padding: 8rem;
+        font-size: 15rem;
+        padding: 4rem;
     }
 
     /* Instructions modal */
@@ -276,6 +290,10 @@ li {
         margin-left: 25%;
     }
 
+    #years p {
+        margin-top: 5%;
+    }
+
     #years p,
     #answers p,
     #scores {
@@ -283,11 +301,11 @@ li {
     }
 
     .btn {
-        height: 300px;
+        height: 220px;
         width: 800px;
-        margin: 3rem;
+        margin: 2rem;
         padding: 15px 8px;
-        font-size: 12em;
+        font-size: 10rem;
     }
 }
 
