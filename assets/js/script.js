@@ -288,19 +288,57 @@ const year3Questions = [
 /**
  * Wait for the DOM to finish loading before running the game
  * Inspiration from the Love Maths project
- * Add event to select level
+ * Add event to select level / Choose year
+ * Listen for click on which year
+ * Remove year selection level
+ * Enter/show that year and show questions
  */
 
+
 /**
- * Removes the levels to show the questions and answers for the level chosen
+ * Insert question and 4 answers from correct year
+ * Listen for click on the answer selected
+ * Check if the answer is correct
+ * If so increase correct answers score
+ * Else if not correct answer
+ * Increase the incorrect answers score
  * 
  */
 
+/** else if?
+ * Insert next question and 4 answers from the year
+ * Repeat above for listening to click on answer
+ * If all questions have been asked and answered for the year
+ * If correct answers total is greater than or equal to 8
+ * Display message congratulations and move on to next level / year
+ * Else if less than 8 display message sorry please try again
+ * Go to start of level / year one - Do you want to start again
+ */
+
 /**
- * Increase correct or incorrect score based on answer
+ * Enter level / year two
+ * Repeat inserting questions and answers
+ * Repeat if all answers have been answered
+ * Go to level / year three
+ * Else repeat year two if not got enough correct
+ */
+
+/**
+ * Enter level / year three
+ * Repeat inserting questions and answers
+ * Repeat if all answers have been answered
+ * Else repeat year three if not got enough correct
+ * If all levels / years complete
+ * Message "Congratulations mischief managed"
+ * End game
+ */
+
+/**
+ * Increase correct score based on answer
  * Go to next question
  */
 
 /**
- * Increasing the correct and incorrect score
+ * Increasing the incorrect score
+ * Go to next question
  */
