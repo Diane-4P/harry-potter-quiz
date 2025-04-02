@@ -287,23 +287,51 @@ const year3Questions = [
 
 /**
  * Wait for the DOM to finish loading before running the game
- * Inspiration from the Love Maths project
- * Add event to select level / Choose year
- * Listen for click on which year
- * Remove year selection level
- * Enter/show that year and show questions
+ * Inspiration from the Love Maths project and One quiz to rule them all
+ * Add event to select year level
+ * Listen for click on which year - only go to other years after completing previous year
  */
+// Code to interact with the DOM
+const levels = document.getElementById("levels");
+const questions = document.getElementById("questions");
+const answerButton = document.getElementById("answers");
+const nextQuestionBtn = document.getElementById("next-question");
+let yearQuestions = [];
 
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            let gameType = this.getAttribute("data-type");
+            if (gameType === "yearOne") {
+                yearQuestions = year1Questions;
+            } else if (gameType === "yearTwo") {
+                year1Questions = year2Questions;
+            } else if (gameType === "yearThree") {
+                year1Questions = year3Questions;
+            }
+            showQuestions(gameType);
+        });
+    }
+});
 
 /**
+ * Remove the year levels section
  * Insert question and 4 answers from correct year
  * Listen for click on the answer selected
  * Check if the answer is correct
  * If so increase correct answers score
  * Else if not correct answer
  * Increase the incorrect answers score
- * 
+ * from Quizar
  */
+function showQuestions() {
+    levels.style.display = "none";
+    questions.style.display = "block";
+
+
+} 
 
 /** else if?
  * Insert next question and 4 answers from the year
