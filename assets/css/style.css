@@ -24,6 +24,7 @@ body {
     height: 100vh;
 }
 
+/* The header section */
 h1 {
     font-size: 4em;
     padding-right: 20px;
@@ -34,7 +35,6 @@ h1 {
     font-size: 2.6em;    
 }
 
-/* Styling the header */
 #header {
     display: flex;
     flex-direction: column;
@@ -43,8 +43,8 @@ h1 {
     margin: 50px;
 }
 
-/* Styling the instructions modal 
-Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp*/
+/* The instructions modal 
+Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
 #instructions {
     display: block;
     position: fixed;
@@ -115,7 +115,7 @@ li {
     padding: 10px;
 }
 
-/* Styling levels background */
+/* Levels section */
 #levels {
     display: block;
     position: absolute;
@@ -133,7 +133,7 @@ li {
     font-size: 40px;
 }
 
-/* Styling questions background */
+/* Questions and Answers section */
 #questions {
     display: none;
     position: absolute;
@@ -169,6 +169,7 @@ li {
 
 /* Media query: mobiles and larger (425px and up) */
 @media screen and (min-width: 425px) {
+    /* The header section */
     #heading {
         font-size: 2.8rem;
     }
@@ -186,6 +187,7 @@ li {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+    /* The header section */
     h1, 
     #heading {
         font-size: 5em;
@@ -224,6 +226,7 @@ li {
 
 /* Media query: laptops and larger (1200px and up) */
 @media screen and (min-width: 1200px) {
+    /* The header section */
     h1,
     #heading {
         font-size: 8rem;
@@ -268,6 +271,7 @@ li {
 
 /* Media query: desktops and 4k (2500px and up) */
 @media screen and (min-width: 2500px) {
+    /* The header section */
     h1,
     #heading {
         font-size: 15rem;
@@ -304,6 +308,7 @@ li {
         font-size: 6rem;
     }
 
+    /* General style for buttons */
     .btn {
         height: 220px;
         width: 800px;
@@ -312,6 +317,7 @@ li {
         font-size: 10rem;
     }
 
+    /* Question buttons style */
     #questions .btn {
         height: 150px;
         width: 800px;
@@ -320,6 +326,7 @@ li {
 
 /* Media query: 5k (5000px and up) */
 @media screen and (min-width: 5000px) {
+    /* The header section */
     h1,
     #heading {
         font-size: 25em;
