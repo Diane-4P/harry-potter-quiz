@@ -370,16 +370,35 @@ function selectAnswer(e) {
         incorrectAnswer++;
         increaseIncorrectAnswer();
     }
+    nextQuestionBtn.style.display = "block";
 }
 
 /**
- * 
+ * Click next question button
+ * if another question then display
+ * else restart questions
+ * or go to next level
  */
+nextQuestionBtn.addEventListener("click", () => {
+    if (currentQuestionIndex < year1Questions.length) {
+        handleNextQuestionBtn();
+    } else {
+        showQuestions();
+    }
+});
 
+function handleNextQuestionBtn() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < year1Questions.length) {
+        showQuestions();        
+    } else if {
+        nextYear();
+    } else {
+        endQuiz();
+    }
+}
 
-/** else if?
- * Insert next question and 4 answers from the year
- * Repeat above for listening to click on answer
+/**
  * If all questions have been asked and answered for the year
  * If correct answers total is greater than or equal to 8
  * Display message congratulations and move on to next level / year
