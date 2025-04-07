@@ -426,10 +426,18 @@ function handleNextQuestionBtn() {
 
 /**
  * Increase correct score based on answer
- * Go to next question
+ * Guidance from Love Maths
  */
+function increaseCorrectAnswer() {
+    let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
+    document.getElementById("correct-answers").innerText = ++oldAnswer;
+}
 
 /**
  * Increasing the incorrect score
  * Go to next question
  */
+function increaseCorrectAnswer() {
+    let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
+    document.getElementById("incorrect-answers").innerText = ++oldAnswer;
+}
