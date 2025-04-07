@@ -293,8 +293,10 @@ const year3Questions = [
  */
 // Code to interact with the DOM
 const levels = document.getElementById("levels");
+const years = document.getElementById("years");
 const questions = document.getElementById("questions");
-const answerButton = document.getElementById("answers");
+const question = document.getElementById("question");
+const answerButtons = document.getElementById("answers");
 const nextQuestionBtn = document.getElementById("next-question");
 let yearQuestions = [];
 
@@ -303,13 +305,13 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            let gameType = this.getAttribute("data-type");
+            const gameType = this.getAttribute("data-type");
             if (gameType === "yearOne") {
                 yearQuestions = year1Questions;
             } else if (gameType === "yearTwo") {
-                year1Questions = year2Questions;
+                yearQuestions = year2Questions;
             } else if (gameType === "yearThree") {
-                year1Questions = year3Questions;
+                yearQuestions = year3Questions;
             }
             showQuestions(gameType);
         });
@@ -318,20 +320,62 @@ document.addEventListener("DOMContentLoaded", function(){
 
 /**
  * Remove the year levels section
- * Insert question and 4 answers from correct year
+ * Display current question and 4 answers from correct year
  * Listen for click on the answer selected
- * Check if the answer is correct
- * If so increase correct answers score
- * Else if not correct answer
- * Increase the incorrect answers score
- * from Quizar
+ *
  */
+let currentQuestionIndex = 0;
+let correctAnswer = 0;
+let incorrectAnswer = 0;
+
 function showQuestions() {
     levels.style.display = "none";
     questions.style.display = "block";
+    resetQuiz();
+    let currentQuestion = yearQuestions[currentQuestionIndex];
+    question.innerHTML = currentQuestion.question;
+        currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);            
+        button.addEventListener("click", selectAnswer);
+    });
+}
 
+/**
+ * When next question button is clicked the quiz buttons are reset
+ */
+function resetQuiz() {
+    nextQuestionBtn.style.display = "none";
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButton.firstChild);
+    }
+}
 
-} 
+/**
+ * Check if the answer is correct re love maths
+ * If so increase correct answers score
+ * Else if not correct answer
+ * Increase the incorrect answers score
+ * Love maths
+ */
+function selectAnswer(e) {
+    const selectedAnswerBtn = e.target;
+    const isCorrect = selectedAnswerBtn.dataset.correct === true;
+    if (isCorrect) {
+        correctAnswer++;
+        increaseCorrectAnswer();        
+    } else {
+        incorrectAnswer++;
+        increaseIncorrectAnswer();
+    }
+}
+
+/**
+ * 
+ */
+
 
 /** else if?
  * Insert next question and 4 answers from the year
