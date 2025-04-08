@@ -294,7 +294,7 @@ const year3Questions = [
 // Code to interact with the DOM
 const levels = document.getElementById("levels");
 const years = document.getElementById("years");
-const questions = document.getElementById("questions");
+const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
 const nextQuestionBtn = document.getElementById("next-question");
@@ -328,17 +328,22 @@ let currentQuestionIndex = 0;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
 
-function showQuestions() {
+function showQuestions() {    
+    instructions.style.display = "none";
     levels.style.display = "none";
-    questions.style.display = "block";
+    quiz.style.display = "block";
     resetQuiz();
     let currentQuestion = yearQuestions[currentQuestionIndex];
     question.innerHTML = currentQuestion.question;
-        currentQuestion.answers.forEach(answer => {
+
+    currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
-        answerButtons.appendChild(button);            
+        answerButtons.appendChild(button);
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }            
         button.addEventListener("click", selectAnswer);
     });
 }
@@ -349,7 +354,7 @@ function showQuestions() {
 function resetQuiz() {
     nextQuestionBtn.style.display = "none";
     while (answerButtons.firstChild) {
-        answerButtons.removeChild(answerButton.firstChild);
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
@@ -362,14 +367,22 @@ function resetQuiz() {
  */
 function selectAnswer(e) {
     const selectedAnswerBtn = e.target;
-    const isCorrect = selectedAnswerBtn.dataset.correct === true;
+    const isCorrect = selectedAnswerBtn.dataset.correct === "true";
     if (isCorrect) {
+        selectedAnswerBtn.classList.add("correct");
         correctAnswer++;
         increaseCorrectAnswer();        
     } else {
+        selectedAnswerBtn.classList.add("incorrect");
         incorrectAnswer++;
         increaseIncorrectAnswer();
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    })
     nextQuestionBtn.style.display = "block";
 }
 
@@ -379,24 +392,25 @@ function selectAnswer(e) {
  * else restart questions
  * or go to next level
  */
-nextQuestionBtn.addEventListener("click", () => {
-    if (currentQuestionIndex < year1Questions.length) {
-        handleNextQuestionBtn();
-    } else {
-        showQuestions();
-    }
-});
+// nextQuestionBtn.addEventListener("click", () => {
+//     if (currentQuestionIndex < year1Questions.length) {
+//         handleNextQuestionBtn();
+//     } else {
+//         showQuestions();
+//     }
+// });
 
-function handleNextQuestionBtn() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < year1Questions.length) {
-        showQuestions();        
-    } else if {
-        nextYear();
-    } else {
-        endQuiz();
-    }
-}
+// function handleNextQuestionBtn() {
+//     currentQuestionIndex++;
+//     if (currentQuestionIndex < year1Questions.length) {
+//         showQuestions();        
+//     } else if {
+//         nextYear();
+//     } else {
+//         endQuiz();
+//     }
+
+// }
 
 /**
  * If all questions have been asked and answered for the year
@@ -405,6 +419,9 @@ function handleNextQuestionBtn() {
  * Else if less than 8 display message sorry please try again
  * Go to start of level / year one - Do you want to start again
  */
+// function nextYear() {
+
+// }
 
 /**
  * Enter level / year two
@@ -428,16 +445,15 @@ function handleNextQuestionBtn() {
  * Increase correct score based on answer
  * Guidance from Love Maths
  */
-function increaseCorrectAnswer() {
-    let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
-    document.getElementById("correct-answers").innerText = ++oldAnswer;
-}
+// function increaseCorrectAnswer() {
+//     let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
+//     document.getElementById("correct-answers").innerText = ++oldAnswer;
+// }
 
 /**
  * Increasing the incorrect score
- * Go to next question
  */
-function increaseCorrectAnswer() {
-    let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
-    document.getElementById("incorrect-answers").innerText = ++oldAnswer;
-}
+// function increaseCorrectAnswer() {
+//     let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
+//     document.getElementById("incorrect-answers").innerText = ++oldAnswer;
+// }

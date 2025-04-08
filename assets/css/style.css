@@ -134,7 +134,7 @@ li {
 }
 
 /* Questions and Answers section */
-#questions {
+#quiz {
     display: none;
     position: absolute;
     justify-items: center;
@@ -208,7 +208,7 @@ li {
 
     /* Levels, question and answers sections */
     #levels,
-    #questions {
+    #quiz {
         width: 40%;
         margin-left: 30%;
     }
@@ -218,7 +218,7 @@ li {
         margin: 1.5rem;
     }
 
-    #questions .btn {
+    #quiz .btn {
         height: 80px;
         width: 300px;
     }
@@ -293,7 +293,7 @@ li {
 
     /* Levels, question and answers sections */
     #levels,
-    #questions {
+    #quiz {
         width: 50%;
         margin-left: 25%;
     }
@@ -318,7 +318,7 @@ li {
     }
 
     /* Question buttons style */
-    #questions .btn {
+    #quiz .btn {
         height: 150px;
         width: 800px;
     }
@@ -362,7 +362,7 @@ li {
         margin-bottom: 6rem;
     }
 
-    #questions .btn {
+    #quiz .btn {
         height: 200px;
         width: 1500px;
         margin: 40px;
