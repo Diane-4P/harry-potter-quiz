@@ -455,6 +455,6 @@ function increaseIncorrectAnswer() {
 function endQuiz() {
     resetQuiz();
     question.innerHTML = `Congratulations! You scored ${correctAnswer}`;
-    document.getElementById("scores").classList.add("hide");
+    document.getElementById("scores").style.display = "none";
     endGame.classList.remove("hide");
 }
