@@ -298,6 +298,7 @@ const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
 const nextQuestionBtn = document.getElementById("next-question");
+const endGame = document.getElementById("end-game")
 let yearQuestions = [];
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -365,25 +366,21 @@ function resetQuiz() {
  * Increase the incorrect answers score
  * Love maths
  */
-function selectAnswer(e) {
-    const selectedAnswerBtn = e.target;
+function selectAnswer(event) {
+    const selectedAnswerBtn = event.target;
     const isCorrect = selectedAnswerBtn.dataset.correct === "true";
+    // const isIncorrect = selectedAnswerBtn.dataset.incorrect === "false";
     if (isCorrect) {
-        selectedAnswerBtn.classList.add("correct");
         correctAnswer++;
         increaseCorrectAnswer();        
-    } else {
-        selectedAnswerBtn.classList.add("incorrect");
+    } else {        
         incorrectAnswer++;
         increaseIncorrectAnswer();
     }
-    Array.from(answerButtons.children).forEach(button => {
-        if (button.dataset.correct === "true") {
-            button.classList.add("correct");
-        }
-        button.disabled = true;
-    })
-    nextQuestionBtn.style.display = "block";
+        Array.from(answerButtons.children).forEach(button => {
+            button.disabled = true;
+    });
+        nextQuestionBtn.style.display = "block";
 }
 
 /**
@@ -392,25 +389,22 @@ function selectAnswer(e) {
  * else restart questions
  * or go to next level
  */
-// nextQuestionBtn.addEventListener("click", () => {
-//     if (currentQuestionIndex < year1Questions.length) {
-//         handleNextQuestionBtn();
-//     } else {
-//         showQuestions();
-//     }
-// });
+nextQuestionBtn.addEventListener("click", () => {
+    if (currentQuestionIndex < year1Questions.length) {
+        handleNextQuestionBtn();
+    } else {
+        showQuestions();
+    }
+});
 
-// function handleNextQuestionBtn() {
-//     currentQuestionIndex++;
-//     if (currentQuestionIndex < year1Questions.length) {
-//         showQuestions();        
-//     } else if {
-//         nextYear();
-//     } else {
-//         endQuiz();
-//     }
-
-// }
+function handleNextQuestionBtn() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < year1Questions.length) {
+        showQuestions();        
+    } else {
+        endQuiz();
+    }
+}
 
 /**
  * If all questions have been asked and answered for the year
@@ -445,15 +439,22 @@ function selectAnswer(e) {
  * Increase correct score based on answer
  * Guidance from Love Maths
  */
-// function increaseCorrectAnswer() {
-//     let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
-//     document.getElementById("correct-answers").innerText = ++oldAnswer;
-// }
+function increaseCorrectAnswer() {
+    let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
+    document.getElementById("correct-answers").innerText = ++oldAnswer;
+}
 
 /**
  * Increasing the incorrect score
  */
-// function increaseCorrectAnswer() {
-//     let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
-//     document.getElementById("incorrect-answers").innerText = ++oldAnswer;
-// }
+function increaseIncorrectAnswer() {
+    let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
+    document.getElementById("incorrect-answers").innerText = ++oldAnswer;
+}
+
+function endQuiz() {
+    resetQuiz();
+    question.innerHTML = `Congratulations! You scored ${correctAnswer}`;
+    document.getElementById("scores").classList.add("hide");
+    endGame.classList.remove("hide");
+}
