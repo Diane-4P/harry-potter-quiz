@@ -22,6 +22,8 @@ body {
     font-family: harryPotter, angelWish, serif;
     width: 100%;
     height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
 /* The header section */
@@ -54,7 +56,7 @@ Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(126, 63, 49, .8);
+    background-color: rgba(126, 63, 49, .95);
 }
 
 #howToPlay {
@@ -105,21 +107,26 @@ li {
 
 /* General style for buttons */
 .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 70px;
-    width: 200px;
+    min-width: 320px;
     font-family: harryPotter, angelWish, serif;
     font-size: 40px;
     border-radius: 10px;
     background-color: rgba(221, 207, 153, .6);
-    margin: 20px 0;
+    margin: 5% 0;
     padding: 10px;
+    max-width: 80%;
 }
 
 /* Levels section */
 #levels {
     display: block;
     position: absolute;
-    justify-items: center;
+    align-items: center;
     width: 80%;
     margin-left: 10%;
     background-color: rgba(126, 63, 49, .8);
@@ -128,43 +135,74 @@ li {
     margin-bottom: 10%;
 }
 
+#years {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #years p {
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 40px;
 }
 
 /* Questions and Answers section */
 #quiz {
     display: none;
-    position: absolute;
-    justify-items: center;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     width: 80%;
     margin-left: 10%;
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
     text-align: center;
 }
+
 #question {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 5%;
     padding-left: 5px;
     font-size: 25px;
 }
-#answers .btn {
+
+#next-question .btn {
+    visibility: visible;
+}
+
+#answers .btn {    
     margin: 10px 0;
 }
 
 #scores {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 10%;
     padding-left: 5px;
     font-size: 25px;
-    gap: 10px;
-    width: 60%;
+    gap: 20px;
+}
+
+/* End game section */
+#end-game {
+    display: none;
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin-left: 10%;
+    background-color: rgba(126, 63, 49, .8);
+    border-radius: 5%;
+    text-align: center;
+}
+
+#end-game p {
+    margin-top: 5%;
+    font-size: 40px;
 }
 
 /* Media query: mobiles and larger (425px and up) */
@@ -232,6 +270,7 @@ li {
         font-size: 8rem;
         padding: 2rem;
     }
+
     #header {
         margin: 30px;
     }
@@ -266,6 +305,11 @@ li {
     #question,
     #scores {
         font-size: 3rem;
+    }
+
+    /* End Game section */
+    #end-game p {
+        font-size: 3.5rem;
     }
 }
 
@@ -304,7 +348,8 @@ li {
 
     #years p,
     #question,
-    #scores {
+    #scores,
+    #end-game p{
         font-size: 6rem;
     }
 
