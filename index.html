@@ -22,7 +22,7 @@
         <h1 id="logo">HP</h1>
         <p id="heading">Harry Potter Quiz</p>
     </header>
-
+    
     <!-- Instructions of how to play as a modal - Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp -->
     <div id="instructions">
         <div id="howToPlay">
@@ -35,7 +35,7 @@
             </ul>
         </div>
     </div>
-
+    
     <!-- Year for each level needed to pass -->
     <div id="levels">
         <div id="years">
@@ -47,26 +47,29 @@
     </div>
 
     <!-- Quiz questions and answers -->
-        <div id="quiz">
-            <p id="question">Question</p>
-            <div id="answers">
-                <button class="btn answer1"></button>
-                <button class="btn answer2"></button>
-                <button class="btn answer3"></button>
-                <button class="btn answer4"></button>
-            </div>
-            <div>
-                <button id="next-question" class="btn">Next Question</button>
-            </div>
-            <div id="scores">
-                <p>Correct: <span id="correct-answers">0</span></p>
-                <p>Incorrect: <span id="incorrect-answers">0</span></p>
-            </div>
-            <div id="end-game" class="hide">
-                <p></p>
-            </div>
+    <div id="quiz">
+        <p id="question">Question</p>
+        <div id="answers">
+            <button class="btn answer1"></button>
+            <button class="btn answer2"></button>
+            <button class="btn answer3"></button>
+            <button class="btn answer4"></button>
         </div>
+        <div>
+            <button id="next-question" class="btn">Next Question</button>
+        </div>
+        <div id="scores">
+            <p>Correct: <span id="correct-answers">0</span></p>
+            <p>Incorrect: <span id="incorrect-answers">0</span></p>
+        </div>
+    </div>
 
+    <!-- End Game -->
+    <div id="end-game">
+        <p id="final-score"></p>
+        <button class="btn" id="next"></button>
+    </div>
+    
     <script src="assets/js/script.js"></script>
 </body>
 </html>
