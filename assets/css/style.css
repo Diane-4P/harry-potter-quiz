@@ -177,6 +177,15 @@ li {
     margin: 10px 0;
 }
 
+/* Background colour based on correct or incorrect answer */
+.correct {
+    background-color: #14855f;
+}
+
+.incorrect {
+    background-color: #e13f3b;
+}
+
 #scores {
     display: flex;
     flex-direction: row;
