@@ -295,29 +295,64 @@ const year3Questions = [
 const levels = document.getElementById("levels");
 const years = document.getElementById("years");
 const quiz = document.getElementById("quiz");
-const question = document.getElementById("question");
+const questionText = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
 const nextQuestionBtn = document.getElementById("next-question");
-const endGame = document.getElementById("end-game")
+const endGame = document.getElementById("end-game");
+
 let yearQuestions = [];
+let currentYear = 1;
+let currentQuestionIndex = 0;
+let correctAnswer = 0;
+let incorrectAnswer = 0;
 
 document.addEventListener("DOMContentLoaded", function(){
-    let buttons = document.getElementsByTagName("button");
+    let buttons = document.getElementsByClassName("year-selector-button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             const gameType = this.getAttribute("data-type");
+
             if (gameType === "yearOne") {
+                currentYear = 1;
                 yearQuestions = year1Questions;
             } else if (gameType === "yearTwo") {
+                currentYear = 2;
                 yearQuestions = year2Questions;
             } else if (gameType === "yearThree") {
+                currentYear = 3;
                 yearQuestions = year3Questions;
             }
-            showQuestions(gameType);
+            startGame(currentYear);
         });
     }
 });
+
+function increaseCurrentYear () {
+    currentYear += 1;
+};
+
+function startGame(currentYear) {
+    // Reset game parameters to start again.
+    let yearQuestions = [];
+    let correctAnswer = 0;
+    let incorrectAnswer = 0;
+    
+    endGame.style.display = "none";
+    resetQuiz();
+    
+    if (currentYear == 1) {
+        yearQuestions = year1Questions;
+    } else if (currentYear == 2) {
+        yearQuestions = year2Questions;
+    } else {
+        currentYear == 3;
+        yearQuestions = year3Questions;
+    }
+    
+    showQuestions();
+};    
+
 
 /**
  * Remove the year levels section
@@ -325,17 +360,16 @@ document.addEventListener("DOMContentLoaded", function(){
  * Listen for click on the answer selected
  *
  */
-let currentQuestionIndex = 0;
-let correctAnswer = 0;
-let incorrectAnswer = 0;
 
 function showQuestions() {    
     instructions.style.display = "none";
-    levels.style.display = "none";
-    quiz.style.display = "block";
+    levels.style.display = "none";       
+    quiz.style.display = "flex";
     resetQuiz();
+    
     let currentQuestion = yearQuestions[currentQuestionIndex];
-    question.innerHTML = currentQuestion.question;
+    questionText.innerHTML = currentQuestion.question;
+    
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -346,14 +380,15 @@ function showQuestions() {
             button.dataset.correct = answer.correct
         }            
         button.addEventListener("click", selectAnswer);
-    });
+    }); 
 }
+
 
 /**
  * When next question button is clicked the quiz buttons are reset
  */
 function resetQuiz() {
-    nextQuestionBtn.style.display = "none";
+    nextQuestionBtn.style.visibility = "hidden";
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -369,18 +404,24 @@ function resetQuiz() {
 function selectAnswer(event) {
     const selectedAnswerBtn = event.target;
     const isCorrect = selectedAnswerBtn.dataset.correct === "true";
-    // const isIncorrect = selectedAnswerBtn.dataset.incorrect === "false";
+    const isIncorrect = selectedAnswerBtn.dataset.incorrect === "false";
+
     if (isCorrect) {
-        correctAnswer++;
+        selectedAnswerBtn.classList.add("correct");
+        // correctAnswer++;
         increaseCorrectAnswer();        
-    } else {        
-        incorrectAnswer++;
+    } else {     
+        selectedAnswerBtn.classList.add("incorrect");   
+        // incorrectAnswer++;
         increaseIncorrectAnswer();
     }
         Array.from(answerButtons.children).forEach(button => {
-            button.disabled = true;
-    });
-        nextQuestionBtn.style.display = "block";
+            if (button.dataset.correct === "true") {
+                button.classList.add("correct");
+            }
+            button.disabled = true;            
+        });             
+        nextQuestionBtn.style.visibility = "visible";
 }
 
 /**
@@ -390,7 +431,7 @@ function selectAnswer(event) {
  * or go to next level
  */
 nextQuestionBtn.addEventListener("click", () => {
-    if (currentQuestionIndex < year1Questions.length) {
+    if (currentQuestionIndex < yearQuestions.length) {
         handleNextQuestionBtn();
     } else {
         showQuestions();
@@ -399,7 +440,7 @@ nextQuestionBtn.addEventListener("click", () => {
 
 function handleNextQuestionBtn() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < year1Questions.length) {
+    if (currentQuestionIndex < yearQuestions.length) {
         showQuestions();        
     } else {
         endQuiz();
@@ -413,9 +454,6 @@ function handleNextQuestionBtn() {
  * Else if less than 8 display message sorry please try again
  * Go to start of level / year one - Do you want to start again
  */
-// function nextYear() {
-
-// }
 
 /**
  * Enter level / year two
@@ -437,24 +475,51 @@ function handleNextQuestionBtn() {
 
 /**
  * Increase correct score based on answer
- * Guidance from Love Maths
+ * Guidance from Love Maths and mentor
  */
 function increaseCorrectAnswer() {
-    let oldAnswer = parseInt(document.getElementById("correct-answers").innerText);
-    document.getElementById("correct-answers").innerText = ++oldAnswer;
+    correctAnswer += 1;
+    document.getElementById("correct-answers").innerText = correctAnswer;
 }
 
 /**
  * Increasing the incorrect score
  */
 function increaseIncorrectAnswer() {
-    let oldAnswer = parseInt(document.getElementById("incorrect-answers").innerText);
-    document.getElementById("incorrect-answers").innerText = ++oldAnswer;
+    incorrectAnswer += 1;
+    document.getElementById("incorrect-answers").innerText = incorrectAnswer;
 }
 
+
+       
 function endQuiz() {
     resetQuiz();
-    question.innerHTML = `Congratulations! You scored ${correctAnswer}`;
-    document.getElementById("scores").style.display = "none";
-    endGame.classList.remove("hide");
-}
+    quiz.style.display = "none";
+    endGame.style.display = "block";
+    question.style.display = "none";
+    let finalScore = document.getElementById("final-score");
+    
+    document.getElementById("scores").style.display = "none";        
+        
+    let nextBtn = document.getElementById("next"); 
+
+    if (correctAnswer < 8) {
+        finalScore.innerHTML = `Sorry. You scored ${correctAnswer} out of 10.
+        Please try again`;
+        nextBtn.innerHTML = "Try Again";
+        nextBtn.addEventListener("click", function () {
+        startGame(currentYear);
+    }); 
+    } else if (correctAnswer >= 8) {
+        finalScore.innerHTML = `Congratulations! You scored ${correctAnswer} out of 10.`;
+        nextBtn.innerHTML = "Next Level";        
+        currentYear += 1;     
+        nextBtn.addEventListener("click", function () {
+            startGame(currentYear);
+        }); 
+    } else if (currentYear == 3 && correctAnswer >= 8) {
+            finalScore.innerHTML = "Congratulations! Mischief Managed!";
+    }
+};
+
+
