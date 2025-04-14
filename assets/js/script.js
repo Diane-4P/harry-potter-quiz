@@ -302,6 +302,7 @@ const endGame = document.getElementById("end-game");
 
 let yearQuestions = [];
 let currentYear = 1;
+const totalYears = 3;
 let currentQuestionIndex = 0;
 let correctAnswer = 0;
 let incorrectAnswer = 0;
@@ -328,25 +329,25 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 });
 
-function increaseCurrentYear () {
-    currentYear += 1;
+function isElegibleForNextYear() {
+    return (correctAnswer >= 8 && currentYear < 3)
 };
 
 function startGame(currentYear) {
     // Reset game parameters to start again.
+    
     let yearQuestions = [];
     let correctAnswer = 0;
     let incorrectAnswer = 0;
-    
+    let currentQuestionIndex = 0;
     endGame.style.display = "none";
     resetQuiz();
     
-    if (currentYear == 1) {
+    if (currentYear === 1) {
         yearQuestions = year1Questions;
-    } else if (currentYear == 2) {
+    } else if (currentYear === 2) {
         yearQuestions = year2Questions;
-    } else {
-        currentYear == 3;
+    } else if (currentYear === 3) {
         yearQuestions = year3Questions;
     }
     
@@ -366,10 +367,9 @@ function showQuestions() {
     levels.style.display = "none";       
     quiz.style.display = "flex";
     resetQuiz();
-    
+
     let currentQuestion = yearQuestions[currentQuestionIndex];
     questionText.innerHTML = currentQuestion.question;
-    
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -507,19 +507,17 @@ function endQuiz() {
         finalScore.innerHTML = `Sorry. You scored ${correctAnswer} out of 10.
         Please try again`;
         nextBtn.innerHTML = "Try Again";
-        nextBtn.addEventListener("click", function () {
-        startGame(currentYear);
+        nextBtn.addEventListener("click", function() {
+            startGame(currentYear);
     }); 
-    } else if (correctAnswer >= 8) {
+    } else if (correctAnswer >= 8 && currentYear < totalYears) {
         finalScore.innerHTML = `Congratulations! You scored ${correctAnswer} out of 10.`;
         nextBtn.innerHTML = "Next Level";        
         currentYear += 1;     
-        nextBtn.addEventListener("click", function () {
+        nextBtn.addEventListener("click", function() {
             startGame(currentYear);
         }); 
     } else if (currentYear == 3 && correctAnswer >= 8) {
             finalScore.innerHTML = "Congratulations! Mischief Managed!";
     }
 };
-
-
