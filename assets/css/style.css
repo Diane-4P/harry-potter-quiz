@@ -56,19 +56,23 @@ Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(126, 63, 49, .95);
+    /* Coppery Orange */
+    background-color: rgba(126, 63, 49, .95); 
 }
 
 #howToPlay {
+    /* Desert Temple */
     background-color: rgba(221, 207, 153, .6);
     margin: 15% auto;
     padding: 20px;
+    /* Coppery Orange */
     border: 1px solid #7e3f31;
     width: 80%;
     text-align: center;
 }
 
 .close {
+    /* Coppery Orange */
     color: #7e3f31;
     float: right;
     font-size: 28px;
@@ -83,6 +87,7 @@ Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
 }
 
 .open-button {
+    /* Coppery Orange */
     background-color: rgba(126, 63, 49, .6);
     font-family: harryPotter, angelWish, serif;
     font-size: 25px;
@@ -116,6 +121,7 @@ li {
     font-family: harryPotter, angelWish, serif;
     font-size: 40px;
     border-radius: 10px;
+    /* Desert Temple */
     background-color: rgba(221, 207, 153, .6);
     margin: 5% 0;
     padding: 10px;
@@ -129,6 +135,7 @@ li {
     align-items: center;
     width: 80%;
     margin-left: 10%;
+    /* Coppery Orange */
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
     text-align: center;
@@ -155,6 +162,7 @@ li {
     align-items: center;
     width: 80%;
     margin-left: 10%;
+    /* Coppery Orange */
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
     text-align: center;
@@ -179,10 +187,12 @@ li {
 
 /* Background colour based on correct or incorrect answer */
 .correct {
+    /* Primal Green */
     background-color: #14855f;
 }
 
 .incorrect {
+    /* Endless Possibilities */
     background-color: #e13f3b;
 }
 
@@ -204,6 +214,7 @@ li {
     align-items: center;
     max-width: 80%;
     margin-left: 10%;
+    /* Coppery Orange */
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
     text-align: center;
