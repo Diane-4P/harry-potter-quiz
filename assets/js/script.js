@@ -337,9 +337,9 @@ function startGame(currentYear) {
     // Reset game parameters to start again.
     
     let yearQuestions = [];
-    let correctAnswer = 0;
-    let incorrectAnswer = 0;
-    let currentQuestionIndex = 0;
+    correctAnswer = 0;
+    incorrectAnswer = 0;
+    currentQuestionIndex = 0;
     endGame.style.display = "none";
     resetQuiz();
     
