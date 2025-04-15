@@ -189,7 +189,7 @@ const year2Questions = [
             {text: "Keeper", correct: false},
         ]
     },
-    {question: "What year was the final movie, “Harry Potter and the Deathly Hallows – Part 2” released? ",
+    {question: "What year was the final movie, 'Harry Potter and the Deathly Hallows – Part 2' released?",
         answers: [
             {text: "2012", correct: false},
             {text: "2009", correct: false},
@@ -253,10 +253,10 @@ const year3Questions = [
     },
     {question: "What is the name of the couple that attends dinner at the Dursley's when Dobby shows up to stop Harry from retuning to Hogwarts?",
         answers: [
-            {text: "Mr. and Mrs. Butler", correct: false},
-            {text: "Mr. and Mrs. Owen", correct: false},
-            {text: "Mr. and Mrs. Jones", correct: false},
-            {text: "Mr. and Mrs. Mason", correct: true},
+            {text: "Mr and Mrs Butler", correct: false},
+            {text: "Mr and Mrs Owen", correct: false},
+            {text: "Mr and Mrs Jones", correct: false},
+            {text: "Mr and Mrs Mason", correct: true},
         ]
     },
     {question: "Ginny Weasley bought a pet Pygmy Puff from her older brothers' joke shop. What did she name it?",
@@ -482,7 +482,7 @@ function increaseIncorrectAnswer() {
 function endQuiz() {
     resetQuiz();
     quiz.style.display = "none";
-    endGame.style.display = "block";
+    endGame.style.display = "flex";
     let finalScore = document.getElementById("final-score");            
     let nextBtn = document.getElementById("next"); 
 
@@ -502,7 +502,7 @@ function endQuiz() {
         }); 
     } else if (currentYear == 3 && correctAnswer >= 8) {
             finalScore.innerHTML = "Congratulations! Mischief Managed!";
-            nextBtn.innerHTML = "Replay";
+            nextBtn.innerHTML = "Play Again";
             nextBtn.addEventListener("click", function() {
                 levels.style.display = "flex";
                 quiz.style.display = "none";
