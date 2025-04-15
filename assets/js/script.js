@@ -122,7 +122,7 @@ const year2Questions = [
             {text: "Ron Weasley", correct: false},
             {text: "Neville Longbottom", correct: false},
             {text: "Viktor Krum", correct: true},
-            {text: "Harry Potter, ", correct: false},
+            {text: "Harry Potter ", correct: false},
         ]
     },
     {question: "'Padfoot' is the nickname for which Harry Potter character?",
@@ -333,10 +333,14 @@ function isElegibleForNextYear() {
     return (correctAnswer >= 8 && currentYear < 3)
 };
 
+/**
+* Enter level / year two / year three
+* Repeat inserting questions and answers
+* Repeat if all answers have been answered
+ */
 function startGame(currentYear) {
-    // Reset game parameters to start again.
-    
-    let yearQuestions = [];
+    // Reset game parameters to start again.    
+    yearQuestions = [];
     correctAnswer = 0;
     incorrectAnswer = 0;
     currentQuestionIndex = 0;
@@ -347,13 +351,16 @@ function startGame(currentYear) {
         yearQuestions = year1Questions;
     } else if (currentYear === 2) {
         yearQuestions = year2Questions;
+        document.getElementById("correct-answers").innerText = 0;
+        document.getElementById("incorrect-answers").innerText = 0;
     } else if (currentYear === 3) {
         yearQuestions = year3Questions;
+        document.getElementById("correct-answers").innerText = 0;
+        document.getElementById("incorrect-answers").innerText = 0;
     }
     
     showQuestions();
 };    
-
 
 /**
  * Remove the year levels section
@@ -383,7 +390,6 @@ function showQuestions() {
     }); 
 }
 
-
 /**
  * When next question button is clicked the quiz buttons are reset
  */
@@ -408,11 +414,9 @@ function selectAnswer(event) {
 
     if (isCorrect) {
         selectedAnswerBtn.classList.add("correct");
-        // correctAnswer++;
         increaseCorrectAnswer();        
     } else {     
-        selectedAnswerBtn.classList.add("incorrect");   
-        // incorrectAnswer++;
+        selectedAnswerBtn.classList.add("incorrect");  
         increaseIncorrectAnswer();
     }
         Array.from(answerButtons.children).forEach(button => {
@@ -448,32 +452,6 @@ function handleNextQuestionBtn() {
 }
 
 /**
- * If all questions have been asked and answered for the year
- * If correct answers total is greater than or equal to 8
- * Display message congratulations and move on to next level / year
- * Else if less than 8 display message sorry please try again
- * Go to start of level / year one - Do you want to start again
- */
-
-/**
- * Enter level / year two
- * Repeat inserting questions and answers
- * Repeat if all answers have been answered
- * Go to level / year three
- * Else repeat year two if not got enough correct
- */
-
-/**
- * Enter level / year three
- * Repeat inserting questions and answers
- * Repeat if all answers have been answered
- * Else repeat year three if not got enough correct
- * If all levels / years complete
- * Message "Congratulations mischief managed"
- * End game
- */
-
-/**
  * Increase correct score based on answer
  * Guidance from Love Maths and mentor
  */
@@ -490,17 +468,22 @@ function increaseIncorrectAnswer() {
     document.getElementById("incorrect-answers").innerText = incorrectAnswer;
 }
 
-
-       
+/**
+ * If all questions have been asked and answered for the year
+ * If correct answers total is greater than or equal to 8
+ * Display message congratulations and move on to next level / year
+ * Else if less than 8 display message sorry please try again
+ * Go to start of level / year one - Do you want to start again
+ * Else repeat year three if not got enough correct
+ * If all levels / years complete
+ * Message "Congratulations mischief managed"
+ * End game
+ */
 function endQuiz() {
     resetQuiz();
     quiz.style.display = "none";
     endGame.style.display = "block";
-    question.style.display = "none";
-    let finalScore = document.getElementById("final-score");
-    
-    document.getElementById("scores").style.display = "none";        
-        
+    let finalScore = document.getElementById("final-score");            
     let nextBtn = document.getElementById("next"); 
 
     if (correctAnswer < 8) {
@@ -519,5 +502,11 @@ function endQuiz() {
         }); 
     } else if (currentYear == 3 && correctAnswer >= 8) {
             finalScore.innerHTML = "Congratulations! Mischief Managed!";
+            nextBtn.innerHTML = "Replay";
+            nextBtn.addEventListener("click", function() {
+                levels.style.display = "flex";
+                quiz.style.display = "none";
+                instructions.style.display = "none";
+            }); 
     }
 };
