@@ -189,12 +189,12 @@ const year2Questions = [
             {text: "Keeper", correct: false},
         ]
     },
-    {question: "Which Hogwarts' house does Luna Lovegood belong to?",
+    {question: "What year was the final movie, “Harry Potter and the Deathly Hallows – Part 2” released? ",
         answers: [
-            {text: "Hufflepuff", correct: false},
-            {text: "Slytherin", correct: false},
-            {text: "Ravenclaw", correct: true},
-            {text: "Gryffindor", correct: false},
+            {text: "2012", correct: false},
+            {text: "2009", correct: false},
+            {text: "2011", correct: true},
+            {text: "2010", correct: false},
         ]
     },
 ];
