@@ -182,7 +182,7 @@ li {
     font-size: 25px;
 }
 
-#next-question .btn {
+#next-question {
     visibility: visible;
     flex-direction: column;
     justify-content: center;
@@ -263,6 +263,10 @@ li {
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
     /* The header section */
+    #header {
+        margin: 30px;
+    }
+
     h1, 
     #heading {
         font-size: 5em;
@@ -284,18 +288,41 @@ li {
     /* Levels, question and answers sections */
     #levels,
     #quiz {
-        width: 40%;
-        margin-left: 30%;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    #question {
+        font-size: 2rem;
+        margin: 3%;
     }
 
     /* General style for buttons */
     .btn {
-        margin: 1.5rem;
+        margin: 1.2rem;
+        font-size: 3rem
     }
 
-    #quiz .btn {
-        height: 80px;
-        width: 300px;
+    #answers .btn {
+        height: 105px;
+        width: 80%;
+    }
+
+    #scores {        
+        margin-bottom: 5%;
+    }
+
+    #scores p {
+        font-size: 2rem;
+    }
+
+    #end-game p {
+        margin: 3%;
+    }
+
+    #next {
+        margin-top: 15px;
+        width: 50%;
     }
 }
 
@@ -330,7 +357,7 @@ li {
         width: 400px;
         padding: 12px 6px;
         margin: 1.5rem;
-        font-size: 4.2em;
+        font-size: 4rem;
     }
 
     /* Levels section*/
@@ -339,9 +366,12 @@ li {
     }
 
     /* Questions and Answers section */ 
-    #question,
-    #scores {
-        font-size: 3rem;
+    #question {
+        font-size: 3.2rem;
+    }
+
+    #scores p {
+        font-size: 3.2rem;
     }
 
     /* End Game section */
@@ -380,29 +410,41 @@ li {
     }
 
     #years p {
-        margin-top: 5%;
+        margin-top: 2%;
     }
 
     #years p,
-    #question,
-    #scores,
+    #question,    
     #end-game p{
-        font-size: 6rem;
+        font-size: 7rem;
     }
 
     /* General style for buttons */
     .btn {
-        height: 220px;
-        width: 800px;
-        margin: 2rem;
+        margin: 1.5rem;
         padding: 15px 8px;
-        font-size: 10rem;
+        font-size: 6rem;
     }
 
     /* Question buttons style */
-    #quiz .btn {
+    #answers .btn {
+        height: 200px;        
+    }
+
+    #next-question  {
         height: 150px;
-        width: 800px;
+        width: 620px;
+    }
+
+    #scores p {
+        font-size: 6rem;
+    }
+
+    #next {
+        height: 150px;
+        margin-bottom: 5%;
+        font-size: 7rem;
+        letter-spacing: 10px;
     }
 }
 
@@ -444,10 +486,11 @@ li {
         margin-bottom: 6rem;
     }
 
-    #quiz .btn {
-        height: 200px;
-        width: 1500px;
+    #answers .btn {
+        height: 220px;
+        width: 1800px;
         margin: 40px;
+        font-size: 10rem;
     }
 
     #years p {
@@ -459,8 +502,28 @@ li {
         margin-top: 5%;
     }
 
+    #next-question {
+        font-size: 8rem;
+        height: 200px;
+        width: 700px;
+    }
+
     #scores {
+        gap: 70px;
+        margin-top: 3%;
+    }
+
+    #scores p {
         font-size: 10rem;
         margin-bottom: 5%;
+    }
+
+    #end-game p {
+        font-size: 9rem;
+    }
+
+    #next {
+        font-size: 9rem;
+        height: 200px;
     }
 }
