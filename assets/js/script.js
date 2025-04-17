@@ -189,7 +189,7 @@ const year2Questions = [
             {text: "Keeper", correct: false},
         ]
     },
-    {question: "What year was the final movie, 'Harry Potter and the Deathly Hallows – Part 2' released?",
+    {question: "What year was the final movie, 'Harry Potter and the Deathly Hallows Part 2' released?",
         answers: [
             {text: "2012", correct: false},
             {text: "2009", correct: false},
