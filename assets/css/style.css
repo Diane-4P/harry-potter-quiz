@@ -133,8 +133,9 @@ li {
 
 /* Levels section */
 #levels {
-    display: block;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 80%;
     margin-left: 10%;
@@ -319,7 +320,6 @@ li {
 
     #end-game {        
         width: 750px;
-        margin: 0 35px;
     }
 
     #end-game p {
