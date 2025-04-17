@@ -224,8 +224,8 @@ li {
     flex-direction: column;   
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    margin-left: 10%;
+    max-width: 70%;
+    margin: 0 auto;
     /* Coppery Orange */
     background-color: rgba(126, 63, 49, .8);
     border-radius: 5%;
@@ -240,6 +240,7 @@ li {
 
 #next {
     margin-bottom: 18px;
+    width: 20%;
 }
 
 /* Media query: mobiles and larger (425px and up) */
@@ -316,13 +317,17 @@ li {
         font-size: 2rem;
     }
 
+    #end-game {        
+        width: 750px;
+        margin: 0 35px;
+    }
+
     #end-game p {
         margin: 3%;
     }
 
     #next {
         margin-top: 15px;
-        width: 50%;
     }
 }
 
@@ -377,6 +382,10 @@ li {
     /* End Game section */
     #end-game p {
         font-size: 3.5rem;
+    }
+
+    #next {
+        width: 40%;
     }
 }
 
@@ -440,11 +449,15 @@ li {
         font-size: 6rem;
     }
 
+    #end-game {        
+        width: 60%;
+    }
+
     #next {
         height: 150px;
         margin-bottom: 5%;
         font-size: 7rem;
-        letter-spacing: 10px;
+        letter-spacing: 5px;
     }
 }
 
