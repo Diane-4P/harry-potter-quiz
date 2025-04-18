@@ -17,36 +17,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background: url(../images/marauders-map.jpg) center center/cover;
-    font-family: harryPotter, angelWish, serif;
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-}
-
-/* The header section */
-h1 {
-    font-size: 4em;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-#heading {
-    font-size: 2.6em;    
-}
-
-#header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 50px;
-}
-
-/* The instructions modal 
-Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
+/* The instructions modal Code from
+W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
 #instructions {
     display: block;
     position: fixed;
@@ -91,9 +63,9 @@ Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
     background-color: rgba(126, 63, 49, .6);
     font-family: harryPotter, angelWish, serif;
     font-size: 25px;
-    padding: 8px;
-    margin-top: 10px;
-    margin-left: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
     display: block;
     position: relative;
 }
@@ -113,20 +85,49 @@ li {
     font-size: 20px;
 }
 
+/* General */
+body {
+    background: url(../images/marauders-map.jpg) center center/cover;
+    font-family: harryPotter, angelWish, serif;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* The header section */
+h1 {
+    font-size: 3em;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+#heading {
+    font-size: 2.6em;    
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
 /* General style for buttons */
 .btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 45px;
     min-width: 200px;
     font-family: harryPotter, angelWish, serif;
-    font-size: 38px;
+    font-size: 28px;
     border-radius: 10px;
     /* Desert Temple */
     background-color: rgba(221, 207, 153, .6);
-    margin: 5% 0;
+    margin: 5px 0;
     padding: 5px;
     width: 90%;
     cursor: pointer;
@@ -179,26 +180,26 @@ li {
     text-align: center;
 }
 
-#question {    
-    flex-direction: row;
+#question {
+    display: flex;    
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin: 5%;
+    border-radius: 5%;
+    margin: 2%;
     padding: 5px;
     font-size: 25px;
+    height: 220px;
+    /* color: rgb(255 248 248); */
+    letter-spacing: 2px;
 }
 
 #next-question {
     visibility: visible;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #answers .btn {    
-    margin: 10px 0;
-    display: inline-block;
-    height: 90px;
+    height: 65px;
 }
 
 /* Background colour based on correct or incorrect answer */
@@ -217,11 +218,11 @@ li {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10%;
-    padding-left: 5px;
+    margin: 10px 0;
     font-size: 25px;
     gap: 20px;
+    letter-spacing: 2px;
+    /* color: white; */
 }
 
 /* End game section */
@@ -241,12 +242,13 @@ li {
 #end-game p {
     margin: 5%;
     padding: 5px;
-    font-size: 40px;
+    font-size: 1.8rem;
 }
 
 #next {
     margin-bottom: 18px;
     width: 20%;
+    font-size: 1.8rem;
 }
 
 /* Media query: mobiles and larger (425px and up) */
@@ -262,8 +264,8 @@ li {
 
     /* Levels section */
     #levels {
-        width: 60%;
-        margin-left: 20%;
+        width: 70%;
+        margin-left: 15%;
     }
 }
 
@@ -292,47 +294,64 @@ li {
         font-size: 2rem;
     }
 
-    /* Levels, question and answers sections */
-    #levels,
+    /* Levels section */
+    #levels{
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .year-selector-button {
+        margin: 10px;
+        font-size: 2.5rem;
+        height: 60px;
+        width: 300px;
+    }
+
+    #years p {
+        margin: 10px 0;
+    }
+
+    /* Question and answers sections */
     #quiz {
         width: 60%;
-        margin-left: 20%;
+        margin: 0 auto;
     }
 
     #question {
-        font-size: 2rem;
-        margin: 3%;
-    }
-
-    /* General style for buttons */
-    .btn {
-        margin: 1.2rem;
-        font-size: 3rem
+        font-size: 1.5rem;
+        margin: 10px;
+        height: 80px;
     }
 
     #answers .btn {
-        height: 105px;
-        width: 80%;
+        width: 60%;
+        height: 55px;
     }
 
+    /* Scores section */
     #scores {        
-        margin-bottom: 5%;
+        margin-bottom: 15px;
     }
 
     #scores p {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
+    /* End game section */
     #end-game {        
-        width: 750px;
+        width: 50%;
     }
 
     #end-game p {
         margin: 3%;
+        letter-spacing: 1px;
+        font-size: 2.2rem;       
     }
 
     #next {
-        margin-top: 15px;
+        margin-bottom: 22px;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
     }
 }
 
@@ -361,27 +380,46 @@ li {
         font-size: 40px;
     }
 
-    /* General style for buttons */
-    .btn {
-        height: 100px;
+    /* Levels section */
+    .year-selector-button {
+        height: 80px;
         width: 400px;
         padding: 12px 6px;
-        margin: 1.5rem;
-        font-size: 4rem;
+        margin: 1rem;
+        font-size: 3.5rem;
     }
 
-    /* Levels section*/
+    #levels {
+        width: 50%;
+        margin: 0 auto;
+    }
     #years p {
         font-size: 3.5rem;
+        margin-top: 10px;
     }
 
     /* Questions and Answers section */ 
     #question {
-        font-size: 3.2rem;
+        font-size: 2.2rem;
+        height: 120px;
     }
 
+    #answers .btn {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        width: 460px;
+        height: 65px;
+    }
+
+    #next-question {
+        font-size: 2.2rem;
+        padding: 7px;
+        height: 55px;        
+    }
+
+    /* Scores section */
     #scores p {
-        font-size: 3.2rem;
+        font-size: 2.2rem;
     }
 
     /* End Game section */
@@ -391,6 +429,8 @@ li {
 
     #next {
         width: 40%;
+        height: 70px;
+        font-size: 3rem;
     }
 }
 
@@ -416,46 +456,56 @@ li {
         margin-right: 10px;
     }
 
-    /* Levels, question and answers sections */
-    #levels,
-    #quiz {
-        width: 50%;
-        margin-left: 25%;
+    /* Levels section */
+    .year-selector-button {
+        margin: 10px;
+        padding: 20px 8px;
+        font-size: 7rem;
+        height: 130px;
+        width: 750px;
     }
-
+    
     #years p {
         margin-top: 2%;
-    }
-
-    #years p,
-    #question,    
-    #end-game p{
         font-size: 7rem;
     }
 
-    /* General style for buttons */
-    .btn {
-        margin: 1.5rem;
-        padding: 15px 8px;
-        font-size: 6rem;
-    }
+    /* Question and answers sections */
+    #question {
+        font-size: 4.5rem;
+        height: 240px;
+        margin: 15px;
+        padding: 10px;
+    }   
 
-    /* Question buttons style */
     #answers .btn {
-        height: 200px;        
+        height: 110px;        
+        width: 950px;
+        font-size: 5rem;
+        margin: 15px 0;
     }
 
     #next-question  {
-        height: 150px;
-        width: 620px;
+        height: 90px;
+        width: 450px;
+        font-size: 4.5rem;
+        padding: 10px;
+        margin: 10px 0;
     }
 
+    /* Scores section */
     #scores p {
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
+    /* End game section */  
     #end-game {        
-        width: 60%;
+        width: 55%;
+    }
+
+    #end-game p{
+        font-size: 7rem;
+        letter-spacing: 2px;
     }
 
     #next {
@@ -490,18 +540,38 @@ li {
         font-size: 90px;
     }
 
-    /* Levels, question and answers sections */
+    /* Levels section */
     #levels {
-        width: 40%;
-        margin-left: 30%;
+        width: 45%;
+        margin: 0 auto;
+    } 
+
+    .year-selector-button {
+        width: 1000px;
+        font-size: 10rem;
+        height: 210px;
+        margin: 25px;
+        padding: 20px 12px;
     }
 
-    #levels .btn {
-        width: 1500px;
+    #years p {
+        font-size: 10rem;
+        margin-bottom: 20px;
+        letter-spacing: 3px;
     }
 
-    #years .year-three {
-        margin-bottom: 6rem;
+    /* Question and answers section */
+    #question {
+        font-size: 8rem;
+        height: 480px;
+        margin: 20px;
+        padding: 12px;
+    }
+
+    #next-question {
+        font-size: 9rem;
+        height: 200px;
+        width: 700px;
     }
 
     #answers .btn {
@@ -511,37 +581,25 @@ li {
         font-size: 10rem;
     }
 
-    #years p {
-        font-size: 10rem;
-    }
-
-    #question {
-        font-size: 10rem;
-        margin-top: 5%;
-    }
-
-    #next-question {
-        font-size: 8rem;
-        height: 200px;
-        width: 700px;
-    }
-
+    /* Scores section */
     #scores {
         gap: 70px;
-        margin-top: 3%;
+        margin-top: 40px;
     }
 
     #scores p {
-        font-size: 10rem;
-        margin-bottom: 5%;
+        font-size: 8rem;
+        margin-bottom: 20px;
     }
 
+    /* End game section */
     #end-game p {
-        font-size: 9rem;
+        font-size: 10rem;
+        letter-spacing: 3px;
     }
 
     #next {
-        font-size: 9rem;
+        font-size: 10rem;
         height: 200px;
     }
 }
