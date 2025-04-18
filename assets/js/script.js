@@ -1,3 +1,6 @@
+/* jshint esversion: 6 */
+/* jshint -W033 */
+
 /**
  * Modal of instructions of how to play
  * Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp
@@ -293,7 +296,6 @@ const year3Questions = [
  */
 // Code to interact with the DOM
 const levels = document.getElementById("levels");
-const years = document.getElementById("years");
 const quiz = document.getElementById("quiz");
 const questionText = document.getElementById("question");
 const answerButtons = document.getElementById("answers");
@@ -327,14 +329,10 @@ document.addEventListener("DOMContentLoaded", function(){
             startGame(currentYear);
         });
     }
-});
-
-function isElegibleForNextYear() {
-    return (correctAnswer >= 8 && currentYear < 3)
-};
+})
 
 /**
-* Enter level / year two / year three
+* Enter level year one / year two / year three
 * Repeat inserting questions and answers
 * Repeat if all answers have been answered
  */
@@ -360,13 +358,12 @@ function startGame(currentYear) {
     }
     
     showQuestions();
-};    
+}    
 
 /**
  * Remove the year levels section
  * Display current question and 4 answers from correct year
  * Listen for click on the answer selected
- *
  */
 
 function showQuestions() {    
@@ -401,16 +398,14 @@ function resetQuiz() {
 }
 
 /**
- * Check if the answer is correct re love maths
+ * Check if the answer is correct re Love Maths
  * If so increase correct answers score
  * Else if not correct answer
  * Increase the incorrect answers score
- * Love maths
  */
 function selectAnswer(event) {
     const selectedAnswerBtn = event.target;
     const isCorrect = selectedAnswerBtn.dataset.correct === "true";
-    const isIncorrect = selectedAnswerBtn.dataset.incorrect === "false";
 
     if (isCorrect) {
         selectedAnswerBtn.classList.add("correct");
@@ -430,9 +425,9 @@ function selectAnswer(event) {
 
 /**
  * Click next question button
- * if another question then display
- * else restart questions
- * or go to next level
+ * If another question then display
+ * Else restart questions
+ * Or go to next level
  */
 nextQuestionBtn.addEventListener("click", () => {
     if (currentQuestionIndex < yearQuestions.length) {
@@ -442,6 +437,10 @@ nextQuestionBtn.addEventListener("click", () => {
     }
 });
 
+/**
+ * If another question then show questions
+ * Else go to end of quiz
+ */
 function handleNextQuestionBtn() {
     currentQuestionIndex++;
     if (currentQuestionIndex < yearQuestions.length) {
@@ -461,7 +460,8 @@ function increaseCorrectAnswer() {
 }
 
 /**
- * Increasing the incorrect score
+ * Increase the incorrect score based on answer
+ * Guidance from Love Maths and mentor
  */
 function increaseIncorrectAnswer() {
     incorrectAnswer += 1;
@@ -469,11 +469,11 @@ function increaseIncorrectAnswer() {
 }
 
 /**
- * If all questions have been asked and answered for the year
+ * If all questions have been asked and answered for the current year
  * If correct answers total is greater than or equal to 8
  * Display message congratulations and move on to next level / year
  * Else if less than 8 display message sorry please try again
- * Go to start of level / year one - Do you want to start again
+ * Go to start of level / year one - Please try again
  * Else repeat year three if not got enough correct
  * If all levels / years complete
  * Message "Congratulations mischief managed"
@@ -509,4 +509,4 @@ function endQuiz() {
                 instructions.style.display = "none";
             }); 
     }
-};
+}
