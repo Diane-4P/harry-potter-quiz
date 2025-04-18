@@ -1,17 +1,25 @@
 # Harry Potter Quiz – Testing Details
--	View README.md file. (add link)
--	View (website name) deployed site here. (add link)
+
+[View README.md file.](/README.md)
+
+[View Harry Potter Quiz deployed site here.](https://diane-4p.github.io/harry-potter-quiz/)
+
 ## Testing 
+
 ## Table of Contents
--	Browser Compatibility (with link)
--	Responsiveness (with link)
--	Validators (with link)
--	Lighthouse Performance (with link)
--	Testing User Stories (with link)
--	Manual Testing and Functionality (with link)
--	Known Bugs (with link)
+
+-	[Browser Compatibility](#browser-compatibility)
+-	[Responsiveness](#responsiveness)
+-	[Validators](#validators)
+-	[Page Speed](#page-speed)
+-	[Testing User Stories](#testing-user-defined-stories-from-the-ux-section-of-readmemd)
+-	[Manual Testing and Functionality](#manual-testing-and-functionality-on-each-page)
+-	[Known Bugs](#known-bugs-discovered)
+
 ## Browser Compatibility
+
 ## Responsiveness
+
 ## Validators
 -	[W3C Markup validator](https://validator.w3.org/)
 
@@ -38,9 +46,19 @@ By adding these notes (/* jshint esversion: 6 */, /* jshint -W033 */) at the top
 
 
 
--	Lighthouse 
+##  Page Speed 
+I had tried using Lighthouse in Chrome developer tools but was having problems so I used Page Speed.
+-   Mobile
+![Performance per mobile](/readme/testing/mobile-performance.png)
+-   Desktop
+![Performance per desktop](/readme/testing/desktop-performance.png)
+-   Link to full results
+https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8uszp3zxp4?form_factor=mobile
 
 ## Testing user defined stories from the UX section of READMe.md
+
 ## Manual Testing and Functionality on each page
+
 ## Further Testing
+
 ## Known bugs discovered
