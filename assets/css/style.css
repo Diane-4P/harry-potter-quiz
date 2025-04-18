@@ -29,7 +29,7 @@ W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
     height: 100%;
     overflow: auto;
     /* Coppery Orange */
-    background-color: rgba(126, 63, 49, .95); 
+    background-color: rgba(126, 63, 49, .95);
 }
 
 #howToPlay {
@@ -103,7 +103,7 @@ h1 {
 }
 
 #heading {
-    font-size: 2.6em;    
+    font-size: 2.6em;
 }
 
 #header {
@@ -170,7 +170,7 @@ h1 {
 #quiz {
     display: none;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     width: 80%;
     margin-left: 10%;
@@ -181,7 +181,7 @@ h1 {
 }
 
 #question {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -198,7 +198,7 @@ h1 {
     visibility: visible;
 }
 
-#answers .btn {    
+#answers .btn {
     height: 65px;
 }
 
@@ -228,7 +228,7 @@ h1 {
 /* End game section */
 #end-game {
     display: none;
-    flex-direction: column;   
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 70%;
@@ -253,6 +253,7 @@ h1 {
 
 /* Media query: mobiles and larger (425px and up) */
 @media screen and (min-width: 425px) {
+
     /* The header section */
     #heading {
         font-size: 2.8rem;
@@ -271,12 +272,13 @@ h1 {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
+
     /* The header section */
     #header {
         margin: 30px;
     }
 
-    h1, 
+    h1,
     #heading {
         font-size: 5em;
     }
@@ -295,7 +297,7 @@ h1 {
     }
 
     /* Levels section */
-    #levels{
+    #levels {
         width: 55%;
         margin: 0 auto;
     }
@@ -329,7 +331,7 @@ h1 {
     }
 
     /* Scores section */
-    #scores {        
+    #scores {
         margin-bottom: 15px;
     }
 
@@ -338,14 +340,14 @@ h1 {
     }
 
     /* End game section */
-    #end-game {        
+    #end-game {
         width: 50%;
     }
 
     #end-game p {
         margin: 3%;
         letter-spacing: 1px;
-        font-size: 2.2rem;       
+        font-size: 2.2rem;
     }
 
     #next {
@@ -357,6 +359,7 @@ h1 {
 
 /* Media query: laptops and larger (1200px and up) */
 @media screen and (min-width: 1200px) {
+
     /* The header section */
     h1,
     #heading {
@@ -393,12 +396,13 @@ h1 {
         width: 50%;
         margin: 0 auto;
     }
+
     #years p {
         font-size: 3.5rem;
         margin-top: 10px;
     }
 
-    /* Questions and Answers section */ 
+    /* Questions and Answers section */
     #question {
         font-size: 2.2rem;
         height: 120px;
@@ -414,7 +418,7 @@ h1 {
     #next-question {
         font-size: 2.2rem;
         padding: 7px;
-        height: 55px;        
+        height: 55px;
     }
 
     /* Scores section */
@@ -436,6 +440,7 @@ h1 {
 
 /* Media query: desktops and 4k (2500px and up) */
 @media screen and (min-width: 2500px) {
+
     /* The header section */
     h1,
     #heading {
@@ -464,7 +469,7 @@ h1 {
         height: 130px;
         width: 750px;
     }
-    
+
     #years p {
         margin-top: 2%;
         font-size: 7rem;
@@ -476,16 +481,16 @@ h1 {
         height: 240px;
         margin: 15px;
         padding: 10px;
-    }   
+    }
 
     #answers .btn {
-        height: 110px;        
+        height: 110px;
         width: 950px;
         font-size: 5rem;
         margin: 15px 0;
     }
 
-    #next-question  {
+    #next-question {
         height: 90px;
         width: 450px;
         font-size: 4.5rem;
@@ -498,12 +503,12 @@ h1 {
         font-size: 4rem;
     }
 
-    /* End game section */  
-    #end-game {        
+    /* End game section */
+    #end-game {
         width: 55%;
     }
 
-    #end-game p{
+    #end-game p {
         font-size: 7rem;
         letter-spacing: 2px;
     }
@@ -518,6 +523,7 @@ h1 {
 
 /* Media query: 5k (5000px and up) */
 @media screen and (min-width: 5000px) {
+
     /* The header section */
     h1,
     #heading {
@@ -534,7 +540,7 @@ h1 {
         margin-bottom: 40px;
         font-size: 7rem;
     }
-    
+
     .close,
     .open-button {
         font-size: 90px;
@@ -544,7 +550,7 @@ h1 {
     #levels {
         width: 45%;
         margin: 0 auto;
-    } 
+    }
 
     .year-selector-button {
         width: 1000px;
