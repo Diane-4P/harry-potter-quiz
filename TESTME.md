@@ -13,9 +13,18 @@
 ## Browser Compatibility
 ## Responsiveness
 ## Validators
--	W3C Markup validator (HTML)
--	W3C CSS validator (CSS)
+-	[W3C Markup validator](https://validator.w3.org/)
+
+    -   ### index.html
+![Results of html checker showing no errors or warnings](image-1.png)
+
+-	[W3C CSS validator](https://jigsaw.w3.org/css-validator/)
+
+    -   ### style.css
+![Results of css checker showing no errors or warnings](image.png)
+
 -	Lighthouse 
+
 ## Testing user defined stories from the UX section of READMe.md
 ## Manual Testing and Functionality on each page
 ## Further Testing
