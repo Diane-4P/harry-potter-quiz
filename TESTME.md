@@ -156,6 +156,8 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 ## Further Testing
 
+-   I viewed the game on my own mobile (Huawei P30 Pro: Chrome) and the height of the game was longer than my screen so I have the same problem as the iPone 5(SE) and my phone is a lot newer, so I will have to look into and making sure that future projects are more responsive. I also noticed that when it came to the question with the longest answers the answer buttons were not central on the background but the 'Next Question' button is central. All the button styles are being picked up by both the answers buttons and the 'Next Question' button and the only difference is that the height of the answer buttons is bigger, so I will need to look into this more to find out what the bug is.
+
 ****
 
 ## Known bugs discovered
