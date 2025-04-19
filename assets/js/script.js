@@ -6,7 +6,7 @@
  * Code from W3 schools https://www.w3schools.com/howto/howto_css_modals.asp
  */
 // Get open, modal and close elements
-let openInstruction = document.getElementById("openInstruction");
+let openInstruction = document.getElementById("open-instruction");
 let instructions = document.getElementById("instructions");
 let closeInstructions = document.getElementsByClassName("close")[0];
 
@@ -381,6 +381,7 @@ function startGame(currentYear) {
   yearQuestions = [];
   correctAnswer = 0;
   incorrectAnswer = 0;
+  // Courtesy of Simon Thornes (4P)
   currentQuestionIndex = 0;
   endGame.style.display = "none";
   resetQuiz();

@@ -32,7 +32,7 @@ W3 schools https://www.w3schools.com/howto/howto_css_modals.asp */
     background-color: rgba(126, 63, 49, .95);
 }
 
-#howToPlay {
+#how-to-play {
     /* Desert Temple */
     background-color: rgba(221, 207, 153, .6);
     margin: 15% auto;
@@ -284,7 +284,7 @@ h1 {
     }
 
     /* Instructions modal */
-    #howToPlay {
+    #how-to-play {
         width: 60%;
     }
 
@@ -531,7 +531,7 @@ h1 {
     }
 
     /* Instructions modal */
-    #howToPlay {
+    #how-to-play {
         width: 45%;
     }
 
