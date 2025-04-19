@@ -161,3 +161,21 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 ****
 
 ## Known bugs discovered
+
+-   Within the startGame function the idea was to play the current year and if you got 8 or more answers correct you could go to the next year level but if you got less than 8 then you were to repeat the year, but I was getting the following error. 
+```
+I had the parameters of the game reset but I had used 'let' to declare them, so the game was not proceeding to the next year.
+script.js:371 Uncaught TypeError: Cannot read properties of undefined (reading 'question')
+at showQuestions (script.js:371:46)
+at startGame (script.js:353:5)
+at HTMLButtonElement.<anonymous> (script.js:518:13)
+```
+When I put the question up on slack Simon Thornes (4P) answered my query and told me that I hadn't reset my currentQuestionIndex to 0, which I included but it was still causing the same problem. Then he told me that I should remove the let assignment in front of the statement as I was creating a local variable and I needed to change the global variable, which put things into perspective. Then I had the problem that the scores were not reseting to 0, but when I added this code (below) to each year then it worked as it should.
+```
+document.getElementById("correct-answers").innerText = 0;
+document.getElementById("incorrect-answers").innerText = 0;
+```
+
+-   The height of the game is longer than the view screen on the iPone 5(SE) and the Huawei P30 Pro which still needs looking into.
+-   In year level three where the answers to the questions is the longest, there is no centralisation of the answer buttons as they are all showing on the left of the background colour, but the 'Next Question' button is in the center. This will also need looking into further.
+
