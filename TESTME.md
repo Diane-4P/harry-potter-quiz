@@ -20,7 +20,7 @@
 
 ## Browser Compatibility
 
-When testing the site on multiple browsers (Chrome, Firefox, Edge and Duck Duck Go) the game performed well by showing the instructions, right and wrong answers, going from one question to the next and going from one level to the next, but there was a white edge around the buttons on the Firefox browser and on the Duck Duck Go the Instructions seemed to be larger than the screen size so showed the slider bar on the right. This will need to be checked out to see what I can do so that it doesn't happen on future projects. All the browsers seem to have a slight height difference than the browser which I will also need to look into more.
+When testing the site on multiple browsers (Chrome, Firefox, Edge and Duck Duck Go) the game performed well by showing the instructions, right and wrong answers, going from one question to the next and going from one level to the next, but there was a white edge around the buttons on the Firefox browser and on the Duck Duck Go the Instructions seemed to be larger than the screen size so showed the slider bar on the right. This will need to be checked out to see what I can do so that it doesn't happen on future projects. All the browsers seem to have a slight height difference than the browser, which I will also need to look into more.
 
 ****
 
@@ -54,7 +54,7 @@ When I put my JavaScript through JS Hint to validate my coding there were the fo
 -   2 undefined variables - global variable declared but not used and an internal variable declared and not used.
 -   2 functions used - function to show that the user was elegible for the next year and function declared within loops referencing an outer scoped variable may lead to confusing semantics (currentYear, yearQuestions, startGame) on line 316.
 
-By adding these notes (/* jshint esversion: 6 */, /* jshint -W033 */) at the top of the script file, the missing semicolons, let and const warning were removed. The warnings and erros were deleted as were not necessary to the running of the function. The function above was left in, as it was not causing a problem and was being used within the game.
+By adding these notes (/* jshint esversion: 6 */, /* jshint -W033 */) at the top of the script file, the missing semicolons, let and const warning were removed. The warnings and erros were deleted as were not necessary to the running of the function. The one warning function in the image above was left in, as it was not causing a problem and was being used within the game.
 
 ****
 
@@ -73,24 +73,24 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 -	As a first time user to the site, I want to know what the site is about and see if it something that I want to use.
     -   From the instructions the user can see that it is a game (How to Play).
-    -   From the instructions it shows that there are questions of multiple choice.
-    -   From the instructions the user can see that if you get enought right you can navigate to the next level.
+    -   From the instructions it shows that there are questions with multiple choice answers.
+    -   From the instructions the user can see that if you get enough right you can navigate to the next level.
     -   When the user closes the instructions you can see that it is questions based on Harry Potter.
 
 -   As a first time user to the site, I want to be able to see the instructions on how to play the game.
-    -   When the user lands on the site the instructions on how to play the game are the first thing that the user sees on how to play the game.
+    -   When the user lands on the site the instructions on how to play the game are the first thing that the user sees.
 
 -   As a user of the quiz, I want to be able to navigate the game with ease.
     -   From the instructions screen it can easily be closed either by using the 'X' to close it, or click outside the How to Play box.
     -   The levels screen shows to enter year one to start the game by clicking on the call to action button.
     -   When answering the questions the user can then click on your chosen answer which then brings up the 'Next Question' call to action button.
-    -   When the user has finished answering questions for that year, the next screen shows the number of questions the user got correct or wrong and then another call to action button which will either take the user to the next level or to repeat the level that the user is on.
+    -   When the user has finished answering questions for that year, the next screen shows the number of questions the user got correct or incorrect and then another call to action button which will either take the user to the next level or to repeat the level that the user is on.
     -   When all levels are completed then the user is then asked if they want to play the game again.
 
 -   As a user of the quiz, I want to be able to see if my answer is correct or not.
-    -   When the user answers a question correct the background colour of the answer turns green.
-    -   When the user answers a question incorrect the background colour of the answer turns red.
-    -   When the user answers the question incorrectly the background colour of the answer turns red and the background colour of the correct answer turns green simultaneously.
+    -   When the user answers a question correct the background colour of the answer button turns green.
+    -   When the user answers a question incorrect the background colour of the answer button turns red.
+    -   When the user answers the question incorrectly the background colour of the answer button turns red and the background colour of the correct answer button turns green simultaneously.
     -   When the user answers the question correctly then the correct answers total at the bottom increases accordingly. 
     -   When the user answers the question incorrectly then the incorrect answers total at the bottom increases accordingly.
 
@@ -156,7 +156,7 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 ## Further Testing
 
--   I viewed the game on my own mobile (Huawei P30 Pro: Chrome) and the height of the game was longer than my screen so I have the same problem as the iPone 5(SE) and my phone is a lot newer, so I will have to look into and making sure that future projects are more responsive. I also noticed that when it came to the question with the longest answers the answer buttons were not central on the background but the 'Next Question' button is central. All the button styles are being picked up by both the answers buttons and the 'Next Question' button and the only difference is that the height of the answer buttons is bigger, so I will need to look into this more to find out what the bug is.
+-   I viewed the game on my own mobile (Huawei P30 Pro: Chrome) and the height of the game was longer than my screen so I have the same problem as the iPone 5(SE) and my phone is a lot newer, so I will have to look into and making sure that future projects are more responsive. I also noticed that when it came to the question with the longest answers the answer buttons were not central on the background but the 'Next Question' button was central. All the button styles are being picked up by both the answers buttons and the 'Next Question' button and the only difference is that the height of the answer buttons is bigger, so I will need to look into this more to find out what the bug is.
 
 ****
 
@@ -178,4 +178,3 @@ document.getElementById("incorrect-answers").innerText = 0;
 
 -   The height of the game is longer than the view screen on the iPone 5(SE) and the Huawei P30 Pro which still needs looking into.
 -   In year level three where the answers to the questions is the longest, there is no centralisation of the answer buttons as they are all showing on the left of the background colour, but the 'Next Question' button is in the center. This will also need looking into further.
-
