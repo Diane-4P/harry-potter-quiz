@@ -96,12 +96,12 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 -   As a user of the quiz, I want to know how many of the questions I got correct.
     -   As the user answers the questions the correct and incorrect totals increase accordingly at the bottom.
-    -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10'.
-    -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10'.
+    -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10.'.
+    -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10.'.
 
 -   As a user of the quiz, I want to know if I can go to the next level or not.
-    -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10' and the call to action button says 'Next Level'.
-    -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10' and the call to action button says 'Try Again'.
+    -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10.' and the call to action button says 'Next Level'.
+    -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10.' and the call to action button says 'Try Again'.
 
 -   As a user of the quiz, I want to know my total score over all the levels.
     -   An overall score will be implemented in the future.
@@ -112,7 +112,47 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 ****
 
-## Manual Testing and Functionality on each page
+## Manual Testing and Functionality on each screen
+
+-   Instructions
+    -   Clicked on the 'X' to close the instructions on how to play the game.
+    -   Clicked on the outside the area of the 'How to Play' instructions to close the modal.
+    -   Clicked on the 'See Instructions' button (when closed) to open the instructions on how to play the game.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools.
+
+-   Levels
+    -   Clicked on each year level (Year One, Year Two, Year Three) to verify it goes to the correct question and answers.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools. 
+    -   Clicked on the 'See Instructions' button (when closed) to open the instructions on how to play the game.
+
+-   Quiz
+    -   Clicked on each answer button to verify that it changes to either red or green or both.
+    -   Clicked on the 'Next Question' button to verify it goes to the next question within its current year.
+    -   Verify that the correct answer total increases with a correct answer selected.
+    -   Verify that the incorrect answer total increases with an incorrect answer selected.
+    -   Verify when the last question is answered and the user has answered enough correct that the 'Next Level' button appears.
+    -   Clicked on the 'Next Level' button to verify it goes to the next year level from the current year.
+    -   Verify when the last question is answered and the user has answered enough incorrect that the 'Try Again' button appears.
+    -   Clicked on the 'Try Again' button to verify it goes back to the current year.
+    -   Verify when the last question is answered and the user has answered enough correct that the 'Congratulation! You scored 8 out of 10.' appears.
+    -   Verify when the last question is answered and the user has answered enough incorrect that the 'Sorry. You scored 4 out of 10.' appears.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools. 
+
+-   Next Level
+    -   Verify the user goes from year level one to year level two and from year level two to year level three.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools. 
+
+-   Try Again
+    -   Verify the user goes from year level one and back to level one to try again.
+    -   Verify the user goes from year level Two and back to level Two to try again.
+    -   Verify the user goes from year level Three and back to level Three to try again.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools. 
+
+-   End Quiz
+    -   Verify when the last question is answered and the user has answered enough correct that the 'Play Again' button appears.
+    -   Verify when the last question is answered and the user has answered enough correct that the 'Congratulation! Mischief Managed!.' appears.
+    -   Clicked on 'Play Again' button and verify it goes to the Levels to play again.
+    -   Verify the responsiveness on mobiles, tablets, laptops, 4K and 5K screens on Chrome's developer tools. 
 
 ## Further Testing
 
