@@ -71,36 +71,50 @@ https://pagespeed.web.dev/analysis/https-diane-4p-github-io-harry-potter-quiz/8u
 
 ## Testing user defined stories from the UX section of READMe.md
 
+-   As a first time user to the site, I want to be able to see the instructions on how to play the game.
+    -   When the user lands on the site the instructions on how to play the game are the first thing that the user sees (see image below).
+
 -	As a first time user to the site, I want to know what the site is about and see if it something that I want to use.
     -   From the instructions the user can see that it is a game (How to Play).
     -   From the instructions it shows that there are questions with multiple choice answers.
     -   From the instructions the user can see that if you get enough right you can navigate to the next level.
+    ![Instructions](/readme/images/us-instructions.png)
     -   When the user closes the instructions you can see that it is questions based on Harry Potter.
-
--   As a first time user to the site, I want to be able to see the instructions on how to play the game.
-    -   When the user lands on the site the instructions on how to play the game are the first thing that the user sees.
+    ![Harry Potter Quiz](/readme/images/harry-potter-quiz-start-game.png)
 
 -   As a user of the quiz, I want to be able to navigate the game with ease.
     -   From the instructions screen it can easily be closed either by using the 'X' to close it, or click outside the How to Play box.
     -   The levels screen shows to enter year one to start the game by clicking on the call to action button.
+    ![Level buttons](/readme/images/us-level-buttons.png)
     -   When answering the questions the user can then click on your chosen answer which then brings up the 'Next Question' call to action button.
-    -   When the user has finished answering questions for that year, the next screen shows the number of questions the user got correct or incorrect and then another call to action button which will either take the user to the next level or to repeat the level that the user is on.
-    -   When all levels are completed then the user is then asked if they want to play the game again.
 
+    ![Next Question button](/readme/images/next-question-button.png)
+    -   When the user has finished answering questions for that year, the next screen shows the number of questions the user got correct or incorrect and then another call to action button which will either take the user to the next level or to repeat the level that the user is on by trying again.
+
+    ![Next level](/readme/images/us-next-level.png)
+    ![Try Again](/readme/images/try-again.png)
+    -   When all levels are completed then the user is then asked if they want to play the game again.
+    ![Play Again](/readme/images/play-again.png)
+    
 -   As a user of the quiz, I want to be able to see if my answer is correct or not.
     -   When the user answers a question correct the background colour of the answer button turns green.
     -   When the user answers a question incorrect the background colour of the answer button turns red.
     -   When the user answers the question incorrectly the background colour of the answer button turns red and the background colour of the correct answer button turns green simultaneously.
-    -   When the user answers the question correctly then the correct answers total at the bottom increases accordingly. 
-    -   When the user answers the question incorrectly then the incorrect answers total at the bottom increases accordingly.
+
+    ![Correct or Incorrect](/readme/images/us-correct-incorrect.png)
+    -   When the user answers the question correctly then the correct answers total at the bottom increases accordingly (see image below). 
+    -   When the user answers the question incorrectly then the incorrect answers total at the bottom increases accordingly (see image below).
 
 -   As a user of the quiz, I want to know how many of the questions I got correct.
     -   As the user answers the questions the correct and incorrect totals increase accordingly at the bottom.
+    ![Answers correct](/readme/images/us-answers-correct-not.png)
     -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10.'.
     -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10.'.
 
 -   As a user of the quiz, I want to know if I can go to the next level or not.
-    -   When all 10 questions are answered if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10.' and the call to action button says 'Next Level'.
+    -   When all 10 questions are answered and if you get enough correct then the next screen says 'Congratulations! You scored 8 out of 10.' and the call to action button says 'Next Level'.
+
+    ![Next level](/readme/images/us-next-level.png)
     -   When all 10 questions are answered and you don't answer enough correctly then the next screen says 'Sorry. You scored 4 out of 10.' and the call to action button says 'Try Again'.
 
 -   As a user of the quiz, I want to know my total score over all the levels.
