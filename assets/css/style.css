@@ -1,13 +1,13 @@
 /* Link to font for the Harry Potter and Angel Wish fallback */
 @font-face {
     font-family: harryPotter;
-    src: url(../fonts/HARRYP_.TTF);
+    src: url(../fonts/harryp.TTF);
 }
 
 @font-face {
     font-family: angelWish;
-    src: url(../fonts/Angel\ wish.ttf);
-    src: url(../fonts/Angel\ wish.otf);
+    src: url(../fonts/angel-wish.ttf);
+    src: url(../fonts/angel-wish.otf);
 }
 
 /* Asterisk wildcard selector to override default styles added by the browser */
